@@ -1,0 +1,70 @@
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+::ng-deep ngx-icalendar:nth-child(2) .calendar-wrapper {
+    background-color: #f3f0f172 !important;
+    border-radius: 20px !important;
+    border-color: #f3f0f1;
+}
+
+::ng-deep ngx-icalendar:nth-child(2) .calendar .selected {
+    background-color: #f3f0f1 !important;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.23), inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333 !important;
+}
+
+::ng-deep ngx-icalendar:nth-child(2) .header-calendar {
+    color: rgba(30, 34, 34, 0.5) !important;
+    font-weight: 900 !important;
+}
+
+::ng-deep ngx-icalendar:nth-child(2) #btnPrev,
+::ng-deep ngx-icalendar:nth-child(2) #btnPrevYear,
+::ng-deep ngx-icalendar:nth-child(2) #btnNext,
+::ng-deep ngx-icalendar:nth-child(2) #btnNextYear {
+    color: rgba(30, 34, 34, 0.5) !important;
+}
+
+::ng-deep ngx-icalendar:nth-child(2) #btnClear,
+::ng-deep ngx-icalendar:nth-child(2) #btnClear {
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(239, 65, 65) !important;
+    border-color: rgb(239, 65, 65) !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    ::ng-deep ngx-icalendar:nth-child(2) #btnClear:hover {
+        color: rgb(255, 255, 255) !important;
+    }
+
+    ::ng-deep ngx-icalendar:nth-child(2) #btnPrev:not(.disabled):hover,
+    ::ng-deep ngx-icalendar:nth-child(2) #btnNext:not(.disabled):hover,
+    ::ng-deep ngx-icalendar:nth-child(2) #btnNextYear:not(.disabled):hover,
+    ::ng-deep ngx-icalendar:nth-child(2) #btnPrevYear:not(.disabled):hover {
+        color: #333 !important;
+    }
+
+    ::ng-deep ngx-icalendar:nth-child(2) button .disabled:hover {
+        color: #333 !important;
+    }
+
+    ::ng-deep ngx-icalendar:nth-child(2) .calendar .item:hover {
+        background-color: #f3f0f1 !important;
+        box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5), inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+        color: #333 !important;
+    }
+}
+@supports not (gap: 1em) {
+    .ngx-icalendar {
+        margin: 0.5em;
+    }
+
+    .ngx-icalendar>* {
+        margin: 1.5em;
+    }
+}
